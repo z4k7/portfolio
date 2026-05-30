@@ -207,12 +207,12 @@ export default function Hero() {
               View work
               <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-150" />
             </a>
-            <a
-              href={`mailto:${PERSONAL.email}`}
+            <button
+              onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
               className="px-5 py-2.5 rounded-xl border border-white/8 text-zinc-400 text-sm font-medium hover:border-white/15 hover:text-zinc-200 transition-all duration-200"
             >
               Get in touch
-            </a>
+            </button>
             <div className="ml-auto flex items-center gap-3">
               <a href={PERSONAL.github} target="_blank" rel="noopener noreferrer"
                 className="text-zinc-600 hover:text-zinc-300 transition-colors duration-150">

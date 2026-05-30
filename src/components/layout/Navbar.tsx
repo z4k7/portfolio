@@ -79,13 +79,13 @@ export default function Navbar() {
           </nav>
 
           {/* CTA */}
-          <a
-            href={`mailto:${PERSONAL.email}`}
+          <button
+            onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
             className="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg bg-gold-400/10 border border-gold-400/20 text-gold-400 text-sm font-medium hover:bg-gold-400/15 transition-all duration-200"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             Hire me
-          </a>
+          </button>
 
           {/* Mobile toggle */}
           <button
@@ -115,13 +115,13 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
-            <a
-              href={`mailto:${PERSONAL.email}`}
-              className="mt-2 flex items-center gap-2 px-4 py-3 rounded-lg bg-gold-400/10 border border-gold-400/20 text-gold-400 text-sm font-medium"
+            <button
+              onClick={() => { setMobileOpen(false); document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" }); }}
+              className="mt-2 w-full text-left flex items-center gap-2 px-4 py-3 rounded-lg bg-gold-400/10 border border-gold-400/20 text-gold-400 text-sm font-medium"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
               Hire me
-            </a>
+            </button>
           </motion.div>
         )}
       </AnimatePresence>
