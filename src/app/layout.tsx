@@ -27,8 +27,10 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Sachin Kizhakkepurath" }],
   creator: "Sachin Kizhakkepurath",
+  metadataBase: new URL("https://z4k7.in"),
   openGraph: {
     type: "website",
+    url: "https://z4k7.in",
     locale: "en_US",
     title: "Sachin Kizhakkepurath — Full-Stack Software Engineer",
     description:
